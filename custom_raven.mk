@@ -38,4 +38,6 @@ BUILD_FINGERPRINT := google/raven/raven:13/TP1A.220905.004/8927612:user/release-
 
 PRODUCT_OVERRIDE_GMS_FINGERPRINT := google/raven/raven:13/TP1A.220905.004/8927612:user/release-keys
 
+$(call inherit-product, vendor/google/raven/raven-vendor.mk)
+
 endif

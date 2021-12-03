@@ -38,4 +38,6 @@ BUILD_FINGERPRINT := google/oriole/oriole:13/TP1A.220905.004/8927612:user/releas
 
 PRODUCT_OVERRIDE_GMS_FINGERPRINT := google/oriole/oriole:13/TP1A.220905.004/8927612:user/release-keys
 
+$(call inherit-product, vendor/google/oriole/oriole-vendor.mk)
+
 endif

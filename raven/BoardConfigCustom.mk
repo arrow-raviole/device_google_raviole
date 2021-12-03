@@ -6,3 +6,5 @@
 #
 
 include device/google/raviole/BoardConfigCustom.mk
+
+include vendor/google/raven/BoardConfigVendor.mk
