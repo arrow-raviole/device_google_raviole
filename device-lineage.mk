@@ -20,6 +20,10 @@ PRODUCT_COPY_FILES += \
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
 
+# HBM
+PRODUCT_COPY_FILES += \
+    device/google/raviole/permissions/permissions_com.android.hbmsvmanager.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/permissions_com.android.hbmsvmanager.xml
+
 # Build necessary packages for vendor
 
 # Audio
