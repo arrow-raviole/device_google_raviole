@@ -17,6 +17,17 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := google/raven/raven:13/TP1A.220905.004/8927612:user/release-keys
 
+PRODUCT_OVERRIDE_GMS_FINGERPRINT := google/raven/raven:13/TP1A.220905.004/8927612:user/release-keys
+
+
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+#Build with Gapps
+ARROW_GAPPS := true
+
 $(call inherit-product, vendor/google/raven/raven-vendor.mk)
+
+$(call inherit-product, vendor/google/camera/googlecamera.mk)

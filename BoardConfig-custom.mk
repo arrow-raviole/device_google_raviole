@@ -5,6 +5,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+
 # Kernel
 TARGET_KERNEL_DTBO_PREFIX := dts/
 TARGET_KERNEL_DTBO := google/dtbo.img
