@@ -19,6 +19,9 @@ TARGET_PREBUILT_KERNEL := device/google/raviole-kernel/Image.lz4
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
 
+# Adaptive Connectivity
+include hardware/google/pixel/connectivity_thermal_power_manager/connectivity_thermal_power_manager.mk
+
 # Build necessary packages for vendor
 
 # Audio
