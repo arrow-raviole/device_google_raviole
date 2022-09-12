@@ -1,9 +1,10 @@
 #
-# Copyright (C) 2022 The Custom AOSP Project
 # Copyright (C) 2021 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+
+BUILD_BROKEN_DUP_RULES := true
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
@@ -14,7 +15,6 @@ TARGET_KERNEL_DTBO := google/dtbo.img
 TARGET_KERNEL_DTB := \
     google/gs101-a0.dtb \
     google/gs101-b0.dtb
-TARGET_KERNEL_SOURCE := kernel/google/raviole/private/gs-google
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD_RAW := $(strip $(shell cat device/google/raviole/vendor_dlkm.modules.load))
@@ -23,7 +23,6 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD_RAW := $(strip $(shell cat device/googl
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(foreach m,$(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD_RAW),$(notdir $(m)))
 BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
 
-TARGET_KERNEL_EXT_MODULE_ROOT := kernel/google/raviole/private/google-modules
 TARGET_KERNEL_EXT_MODULES := \
     amplifiers/audiometrics \
     amplifiers/cs35l41 \
