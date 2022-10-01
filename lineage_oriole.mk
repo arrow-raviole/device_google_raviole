@@ -17,9 +17,34 @@ PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 6
 PRODUCT_NAME := lineage_oriole
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
+# riceDroid Flags
+
+# maintainer flag (one word only/no spacing)
+RICE_MAINTAINER := nivlafx•mikeng
+
+# chipset flag (one word only/no spacing)
+RICE_CHIPSET := GoogleTensor
+
+# gapps build flag, if not defined build type is vanilla
+WITH_GMS := true
+
+# Sushi Bootanimation (only 720/1080p/1440 supported. if not defined, bootanimation is google bootanimation)
+SUSHI_BOOTANIMATION := 1080
+
+# Graphene Camera
+TARGET_BUILD_GRAPHENEOS_CAMERA := false
+
+# disable/enable blur support, default is false
+TARGET_ENABLE_BLUR := false
+
+# UDFPS ICONS/ANIMATIONS
+TARGET_HAS_UDFPS := true
+
+# Quick tap feature
+TARGET_SUPPORTS_QUICK_TAP := true
+
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=oriole \
@@ -28,3 +53,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := google/oriole/oriole:13/TP1A.220905.004/8927612:user/release-keys
 
 $(call inherit-product, vendor/google/oriole/oriole-vendor.mk)
+
+$(call inherit-product, vendor/google/camera/googlecamera.mk)
+
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)

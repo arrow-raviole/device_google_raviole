@@ -38,13 +38,13 @@ TARGET_BUILD_GRAPHENEOS_CAMERA := false
 TARGET_ENABLE_BLUR := false
 
 # UDFPS ICONS/ANIMATIONS
-# TARGET_HAS_UDFPS := true
+TARGET_HAS_UDFPS := true
 
 # Quick tap feature
-# TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_QUICK_TAP := true
 
 # Face Unlock
-# TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=raven \
@@ -58,4 +58,4 @@ $(call inherit-product, vendor/google/raven/raven-vendor.mk)
 
 $(call inherit-product, vendor/google/camera/googlecamera.mk)
 
-$(call inherit-product, vendor/gms/common/common-vendor.mk)
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
