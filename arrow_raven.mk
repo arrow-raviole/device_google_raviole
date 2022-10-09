@@ -1,11 +1,15 @@
 #
+# Copyright (C) 2022 The ArrowOS Project
 # Copyright (C) 2021 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Lineage stuff.
+# Inherit some common Arrow stuff.
 $(call inherit-product, vendor/arrow/config/common.mk)
+
+# Inherit Stock Google Camera & Photos.
+$(call inherit-product, vendor/google/camera/googlecamera.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/raviole/aosp_raven.mk)
@@ -32,5 +36,3 @@ BUILD_FINGERPRINT := google/raven/raven:13/TP1A.220905.004/8927612:user/release-
 PRODUCT_OVERRIDE_GMS_FINGERPRINT := google/raven/raven:13/TP1A.220905.004/8927612:user/release-keys
 
 $(call inherit-product, vendor/google/raven/raven-vendor.mk)
-
-$(call inherit-product, vendor/google/camera/googlecamera.mk)
